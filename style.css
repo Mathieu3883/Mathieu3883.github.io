@@ -1,3 +1,21 @@
+@media (max-width: 860px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 :root {
   --orange: #ff6d0b;
   --text-color: #34495e;
@@ -23,7 +41,9 @@ header {
 header h1 a {
   color: var(--orange);
   text-decoration: none;
-  padding: 15px;
+  padding: 10px;
+  align-items: center;
+  display: flex;
 }
 
 header h1 {
@@ -31,9 +51,16 @@ header h1 {
   padding: 0;
 }
 
+header nav {
+  display: flex;
+  align-items: center;
+}
+
 header nav ul {
   display: flex;
   justify-content: space-between;
+  margin: 0;
+  padding: 0 20px;
 }
 
 header nav ul li {
@@ -43,10 +70,11 @@ header nav ul li {
 }
 
 header nav ul li a {
+  display: block;
   text-decoration: none;
   color: var(--text-color);
   font-weight: 600;
-  padding: 15px 15px;
+  padding: 10px 10px 10px;
 }
 
 header nav ul li a:hover {
