@@ -36,6 +36,10 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 header h1 a {
@@ -81,4 +85,9 @@ header nav ul li a:hover {
   text-decoration: none;
   color: var(--orange);
   border-bottom: 2px solid var(--orange);
+}
+
+main {
+  margin-top: 90px;
+  padding: 20px;
 }
