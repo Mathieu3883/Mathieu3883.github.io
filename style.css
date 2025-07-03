@@ -90,13 +90,29 @@ header nav ul li a:hover {
 main {
   margin-top: 90px;
   padding: 20px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {
   color: grey;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   position: relative;
   bottom: 0;
   width: 100%;
+}
+
+section {
+  margin: 20px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  color: var(--text-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  width: 1000px;
+  max-width: 100%;
 }
