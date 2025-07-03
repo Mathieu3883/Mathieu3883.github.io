@@ -19,6 +19,7 @@
 :root {
   --orange: #ff6d0b;
   --text-color: #34495e;
+  --header-height: 82px;
 }
 
 body {
@@ -86,8 +87,12 @@ header nav ul li a:hover {
   border-bottom: 2px solid var(--orange);
 }
 
+html {
+    scroll-padding-top: calc(var(--header-height) + 20px);
+}
+
 main {
-  margin-top: 90px;
+  margin-top: var(--header-height);
   padding: 20px;
   display: flex;
   flex-direction: column;
