@@ -124,3 +124,8 @@ section h2 {
   border-bottom: 3px solid var(--orange);
   font-size: 2rem;
 }
+
+h3 {
+  color: var(--text-color);
+  font-size: 1.6rem;
+}
