@@ -23,6 +23,10 @@
   :root {
     --header-height: 333px;
   }
+  section {
+  border-radius: 0 !important;
+  max-width: 100% !important;
+}
 }
 
 @media (min-width: 860px) {
