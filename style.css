@@ -201,9 +201,10 @@ main ul li::before {
   text-decoration: none;
   font-weight: 600;
   display: inline-block;
+  transition: all 0.3s ease;
 }
 
 .button:hover {
   background-color: #eb5e00;
-  transition: background-color 0.3s ease;
+  transform: translateY(-1px);
 }
