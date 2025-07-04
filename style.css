@@ -2,6 +2,7 @@
   --orange: #ff6d0b;
   --text-color: #34495e;
   --background-color: #f4f4f4;
+  --header-height: 82px;
 }
 
 body {
@@ -198,8 +199,8 @@ main ul li::before {
     --header-height: 126px;
   }
   #accueil {
-  flex-direction: column;
-}
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 600px) {
@@ -215,13 +216,7 @@ main ul li::before {
     --header-height: 333px;
   }
   section {
-  border-radius: 0;
-  max-width: 100%;
-}
-}
-
-@media (min-width: 860px) {
-  :root {
-    --header-height: 82px;
+    border-radius: 0;
+    max-width: 100%;
   }
 }
