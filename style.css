@@ -193,7 +193,7 @@ main ul li::before {
   background-color: var(--orange);
   color: #fff;
   padding: 10px 20px;
-  margin: 20px 5px 0;
+  margin: 10px 5px 0;
   border: none;
   border-radius: 50px;
   cursor: pointer;
