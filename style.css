@@ -164,16 +164,13 @@ section {
 
 #accueil h2 {
   text-align: center;
+  border-bottom: none;
 }
 
 section h2 {
   margin-top: 0;
   border-bottom: 3px solid var(--orange);
   font-size: 2rem;
-}
-
-#accueil h2 {
-  border-bottom: none;
 }
 
 h3 {
