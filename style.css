@@ -158,7 +158,7 @@ section h2 {
 h3 {
   color: var(--text-color);
   font-size: 1.6rem;
-  margin-top:10px;
+  margin-top: 10px;
 }
 
 main ul {
@@ -240,6 +240,13 @@ main ul li::before {
   }
   #accueil {
     flex-direction: column;
+  }
+  .more-content {
+    transition: none;
+  }
+
+  .more-content.open {
+    max-height: 1000px;
   }
 }
 
