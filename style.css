@@ -94,7 +94,7 @@ footer {
 
 section {
   margin: 20px;
-  padding: 20px;
+  padding: 40px;
   background-color: #fff;
   border-radius: 10px;
   color: var(--text-color);
@@ -104,6 +104,14 @@ section {
   align-items: flex-start;
   width: 1000px;
   max-width: 95%;
+  box-sizing: border-box;
+}
+
+.part {
+  background-color: var(--background-color);
+  border-left: 4px solid var(--orange);
+  padding: 20px;
+  margin: 15px 0;
 }
 
 #accueil {
@@ -113,6 +121,7 @@ section {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding: 20px;
 }
 
 #accueil img {
@@ -149,6 +158,7 @@ section h2 {
 h3 {
   color: var(--text-color);
   font-size: 1.6rem;
+  margin-top: 10px;
 }
 
 main ul {
@@ -175,7 +185,7 @@ main ul li::before {
   background-color: var(--orange);
   color: #fff;
   padding: 10px 20px;
-  margin: 10px 5px 0;
+  margin: 0 5px 20px;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -190,6 +200,36 @@ main ul li::before {
   transform: translateY(-1px);
 }
 
+.more-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.more-content.open {
+  max-height: 300px;
+  transition: max-height 0.5s ease;
+}
+
+.voir-plus {
+  background-color: white;
+  color: var(--orange);
+  padding: 8px 18px;
+  margin: 0;
+  font-weight: 600;
+  border-radius: 50px;
+  border: 1px solid var(--orange);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.voir-plus:hover {
+  background-color: var(--orange);
+  color: #fff;
+}
+
 @media (max-width: 860px) {
   header {
     flex-direction: column;
@@ -200,6 +240,13 @@ main ul li::before {
   }
   #accueil {
     flex-direction: column;
+  }
+  .more-content {
+    transition: none;
+  }
+
+  .more-content.open {
+    max-height: 1000px;
   }
 }
 
