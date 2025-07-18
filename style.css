@@ -197,7 +197,27 @@ main ul li::before {
 }
 
 .more-content.open {
-  max-height: 1000px;
+  max-height: 300px;
+  transition: max-height 0.5s ease;
+}
+
+.voir-plus {
+  background-color: white;
+  color: var(--orange);
+  padding: 8px 18px;
+  margin: 10px 5px 0;
+  font-weight: 600;
+  border-radius: 50px;
+  border: 1px solid var(--orange);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.voir-plus:hover {
+  background-color: var(--orange);
+  color: #fff;
 }
 
 @media (max-width: 860px) {
