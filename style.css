@@ -190,6 +190,16 @@ main ul li::before {
   transform: translateY(-1px);
 }
 
+.more-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.more-content.open {
+  max-height: 1000px;
+}
+
 @media (max-width: 860px) {
   header {
     flex-direction: column;
