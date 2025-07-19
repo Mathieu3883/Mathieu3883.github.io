@@ -169,7 +169,7 @@ h3 {
   margin: 10px 0;
 }
 
-main div {
+main > section > div {
   margin: 10px 0;
 }
 
