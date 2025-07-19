@@ -256,13 +256,6 @@ main ul li::before {
   #accueil {
     flex-direction: column;
   }
-  .more-content {
-    transition: none;
-  }
-
-  .more-content.open {
-    max-height: 1000px;
-  }
 }
 
 @media (max-width: 600px) {
