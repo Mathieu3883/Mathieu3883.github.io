@@ -149,6 +149,18 @@ section {
   border-bottom: none;
 }
 
+#competences-box {
+  display: flex;
+  flex-direction: space-between;
+  flex-wrap: wrap;
+}
+
+#competences-box div {
+  padding: 0 50px;
+  box-sizing: border-box;
+  width: 50%;
+}
+
 section h2 {
   margin-top: 0;
   border-bottom: 3px solid var(--orange);
