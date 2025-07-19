@@ -23,6 +23,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 2;
 }
 
 header h1 a {
@@ -105,7 +106,6 @@ section {
   width: 1000px;
   max-width: 95%;
   box-sizing: border-box;
-  z-index: -1;
 }
 
 .part {
