@@ -157,6 +157,20 @@ section {
   width: 100%;
 }
 
+#contact {
+  align-items: center;
+}
+
+#contact p {
+  margin: 0 0 10px;
+}
+
+#contact > div {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 section h2 {
   margin-top: 0;
   border-bottom: 3px solid var(--orange);
