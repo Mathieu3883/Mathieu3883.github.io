@@ -113,6 +113,8 @@ section {
   border-left: 4px solid var(--orange);
   padding: 20px;
   margin: 15px 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #accueil {
