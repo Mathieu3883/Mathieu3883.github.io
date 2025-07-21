@@ -44,10 +44,19 @@ window.addEventListener("scroll", () => {
 
 [...navLinks, h1].forEach((link) => {
   link.addEventListener("click", () => {
-    nav.classList.remove("open");
-    nav.style.maxHeight = "0";
+    navHeight();
   });
 });
+
+function navHeight() {
+  if (hamburger.offsetParent !== null) {
+    nav.classList.remove("open");
+    nav.style.maxHeight = "0";
+  }
+  else {
+    nav.style.maxHeight = null;
+  }
+}
 
 function headerHeight() {
   const header = document.querySelector("header");
@@ -56,3 +65,4 @@ function headerHeight() {
 }
 window.addEventListener('DOMContentLoaded', headerHeight);
 window.addEventListener('resize', headerHeight);
+window.addEventListener('resize', navHeight);
