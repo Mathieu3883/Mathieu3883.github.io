@@ -3,7 +3,9 @@ const navLinks = document.querySelectorAll("header nav a");
 const h1 = document.querySelector("h1");
 const sections = document.querySelectorAll("main section");
 const hamburger = document.getElementById("hamburger");
-const navUl = nav.querySelector("ul"); 
+const navUl = document.querySelector("ul");
+const nav = document.getElementById("nav");
+const header = document.querySelector("header");
 
 voirPlusButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -59,10 +61,10 @@ function navHeight() {
 }
 
 function headerHeight() {
-  const header = document.querySelector("header");
   const headerHeight = header.offsetHeight;
   document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
 }
+
 window.addEventListener('DOMContentLoaded', headerHeight);
 window.addEventListener('resize', headerHeight);
 window.addEventListener('resize', navHeight);
