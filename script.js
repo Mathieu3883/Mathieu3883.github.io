@@ -22,7 +22,7 @@ hamburger.addEventListener("click", () => {
   nav.classList.toggle("open");
   nav.style.maxHeight =
       nav.classList.contains("open")
-        ? 248 + "px"
+        ? 240 + "px"
         : "0";
 });
 
