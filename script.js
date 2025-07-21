@@ -1,4 +1,12 @@
 const voirPlusButtons = document.querySelectorAll(".voir-plus");
+const navLinks = document.querySelectorAll("header nav a");
+const h1 = document.querySelector("h1");
+const sections = document.querySelectorAll("main section");
+const hamburger = document.getElementById("hamburger");
+const navUl = document.querySelector("ul");
+const nav = document.getElementById("nav");
+const header = document.querySelector("header");
+
 voirPlusButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const targetId = button.getAttribute("data-target");
@@ -13,8 +21,14 @@ voirPlusButtons.forEach((button) => {
   });
 });
 
-const navLinks = document.querySelectorAll("header nav a");
-const sections = document.querySelectorAll("main section");
+hamburger.addEventListener("click", () => {
+  nav.classList.toggle("open");
+  nav.style.maxHeight =
+      nav.classList.contains("open")
+        ? navUl.scrollHeight + "px"
+        : "0";
+});
+
 window.addEventListener("scroll", () => {
   let current = "";
   sections.forEach((section) => {
@@ -29,3 +43,28 @@ window.addEventListener("scroll", () => {
     link.classList.toggle("active-link", link.hash === `#${current}`);
   });
 });
+
+[...navLinks, h1].forEach((link) => {
+  link.addEventListener("click", () => {
+    navHeight();
+  });
+});
+
+function navHeight() {
+  if (hamburger.offsetParent !== null) {
+    nav.classList.remove("open");
+    nav.style.maxHeight = "0";
+  }
+  else {
+    nav.style.maxHeight = null;
+  }
+}
+
+function headerHeight() {
+  const headerHeight = header.offsetHeight;
+  document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+}
+
+window.addEventListener('DOMContentLoaded', headerHeight);
+window.addEventListener('resize', headerHeight);
+window.addEventListener('resize', navHeight);

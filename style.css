@@ -15,7 +15,7 @@ body {
 header {
   background-color: #fff;
   color: var(--text-color);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -37,6 +37,20 @@ header h1 a {
 header h1 {
   margin: 0;
   padding: 0;
+}
+
+header button#hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+header button#hamburger:hover {
+  color: var(--orange);
 }
 
 header nav {
@@ -288,19 +302,42 @@ main ul li::before {
 @media (max-width: 600px) {
   header {
     flex-direction: column;
+  }
+  #title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: row;
+  }
+  header ul {
     align-items: center;
+  }
+  header button#hamburger {
+    display: block;
+    padding: 0 10px;
   }
   header nav ul {
     flex-direction: column;
     align-items: center;
   }
   :root {
-    --header-height: 333px;
+    --header-height: 64px;
   }
   section h2 {
     font-size: 1.6rem;
   }
   h3 {
     font-size: 1.4rem;
+  }
+  header h1 a {
+    padding: 0 10px;
+  }
+  #nav {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  #nav.open {
+    transition: max-height 0.3s ease;
   }
 }
