@@ -15,7 +15,7 @@ body {
 header {
   background-color: #fff;
   color: var(--text-color);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -302,7 +302,6 @@ main ul li::before {
 @media (max-width: 600px) {
   header {
     flex-direction: column;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
   }
   #title {
     display: flex;
