@@ -1,4 +1,9 @@
 const voirPlusButtons = document.querySelectorAll(".voir-plus");
+const navLinks = document.querySelectorAll("header nav a");
+const h1 = document.querySelector("h1");
+const sections = document.querySelectorAll("main section");
+const hamburger = document.getElementById("hamburger");
+
 voirPlusButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const targetId = button.getAttribute("data-target");
@@ -13,9 +18,7 @@ voirPlusButtons.forEach((button) => {
   });
 });
 
-const hamburger = document.getElementById("hamburger");
 hamburger.addEventListener("click", () => {
-  const nav = document.getElementById("nav");
   nav.classList.toggle("open");
   nav.style.maxHeight =
       nav.classList.contains("open")
@@ -23,8 +26,6 @@ hamburger.addEventListener("click", () => {
         : "0";
 });
 
-const navLinks = document.querySelectorAll("header nav a");
-const sections = document.querySelectorAll("main section");
 window.addEventListener("scroll", () => {
   let current = "";
   sections.forEach((section) => {
@@ -37,5 +38,12 @@ window.addEventListener("scroll", () => {
   }
   navLinks.forEach((link) => {
     link.classList.toggle("active-link", link.hash === `#${current}`);
+  });
+});
+
+[...navLinks, h1].forEach((link) => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("open");
+    nav.style.maxHeight = "0";
   });
 });
