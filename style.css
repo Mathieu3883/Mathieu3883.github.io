@@ -39,6 +39,15 @@ header h1 {
   padding: 0;
 }
 
+header button#hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 24px;
+  cursor: pointer;
+}
+
 header nav {
   display: flex;
   align-items: center;
@@ -288,19 +297,42 @@ main ul li::before {
 @media (max-width: 600px) {
   header {
     flex-direction: column;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  #title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: row;
+  }
+  header ul {
     align-items: center;
+  }
+  header h1 {
+    display: block;
+  }
+  header button#hamburger {
+    display: block;
   }
   header nav ul {
     flex-direction: column;
     align-items: center;
   }
   :root {
-    --header-height: 333px;
+    --header-height: 83px;
   }
   section h2 {
     font-size: 1.6rem;
   }
   h3 {
     font-size: 1.4rem;
+  }
+  #nav {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+  #nav.open {
+    transition: max-height 0.5s ease;
   }
 }

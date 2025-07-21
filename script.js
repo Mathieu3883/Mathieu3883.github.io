@@ -13,6 +13,16 @@ voirPlusButtons.forEach((button) => {
   });
 });
 
+const hamburger = document.getElementById("hamburger");
+hamburger.addEventListener("click", () => {
+  const nav = document.getElementById("nav");
+  nav.classList.toggle("open");
+  nav.style.maxHeight =
+      nav.classList.contains("open")
+        ? 333 + "px"
+        : "0";
+});
+
 const navLinks = document.querySelectorAll("header nav a");
 const sections = document.querySelectorAll("main section");
 window.addEventListener("scroll", () => {
