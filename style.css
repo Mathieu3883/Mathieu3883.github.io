@@ -132,6 +132,12 @@ section {
   border-radius: 3px;
 }
 
+.italique {
+  font-style: italic;
+  color: grey;
+  font-weight: 400;
+}
+
 #accueil {
   background-color: var(--background-color);
   box-shadow: none;
