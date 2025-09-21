@@ -132,6 +132,12 @@ section {
   border-radius: 3px;
 }
 
+.italique {
+  font-style: italic;
+  color: grey;
+  font-weight: 400;
+}
+
 #accueil {
   background-color: var(--background-color);
   box-shadow: none;
@@ -151,15 +157,22 @@ section {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-#accueil div {
+#accueil > div {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 20px;
 }
 
+#accueil > div > div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
 #accueil a {
-  margin-right: auto;
+  margin: 5px;
 }
 
 #accueil h2 {
@@ -169,7 +182,7 @@ section {
 
 #competences-box {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   width: 100%;
 }
@@ -184,7 +197,7 @@ section {
 }
 
 #contact > div {
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -233,7 +246,7 @@ main ul li::before {
   background-color: var(--orange);
   color: #fff;
   padding: 10px 20px;
-  margin: 0 5px 20px;
+  margin: 10px 5px 20px;
   border: none;
   border-radius: 50px;
   cursor: pointer;
