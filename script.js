@@ -23,10 +23,9 @@ voirPlusButtons.forEach((button) => {
 
 hamburger.addEventListener("click", () => {
   nav.classList.toggle("open");
-  nav.style.maxHeight =
-      nav.classList.contains("open")
-        ? navUl.scrollHeight + "px"
-        : "0";
+  nav.style.maxHeight = nav.classList.contains("open")
+    ? navUl.scrollHeight + "px"
+    : "0";
 });
 
 window.addEventListener("scroll", () => {
@@ -54,17 +53,19 @@ function navHeight() {
   if (hamburger.offsetParent !== null) {
     nav.classList.remove("open");
     nav.style.maxHeight = "0";
-  }
-  else {
+  } else {
     nav.style.maxHeight = null;
   }
 }
 
 function headerHeight() {
   const headerHeight = header.offsetHeight;
-  document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+  document.documentElement.style.setProperty(
+    "--header-height",
+    `${headerHeight}px`
+  );
 }
 
-window.addEventListener('DOMContentLoaded', headerHeight);
-window.addEventListener('resize', headerHeight);
-window.addEventListener('resize', navHeight);
+window.addEventListener("DOMContentLoaded", headerHeight);
+window.addEventListener("resize", headerHeight);
+window.addEventListener("resize", navHeight);
