@@ -172,8 +172,7 @@ section {
 }
 
 #accueil a {
-  margin-right: auto;
-  margin-right: 10px;
+  margin: 5px;
 }
 
 #accueil h2 {
@@ -247,7 +246,7 @@ main ul li::before {
   background-color: var(--orange);
   color: #fff;
   padding: 10px 20px;
-  margin: 0 5px 20px;
+  margin: 10px 5px 20px;
   border: none;
   border-radius: 50px;
   cursor: pointer;
