@@ -3,7 +3,7 @@ const navLinks = document.querySelectorAll("header nav a");
 const h1 = document.querySelector("h1");
 const sections = document.querySelectorAll("main section");
 const hamburger = document.getElementById("hamburger");
-const navUl = document.querySelector("ul");
+const navUl = document.querySelector("#nav ul");
 const nav = document.getElementById("nav");
 const header = document.querySelector("header");
 
