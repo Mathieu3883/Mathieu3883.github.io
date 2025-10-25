@@ -225,11 +225,19 @@ main ul {
 }
 
 main ul li {
-  padding: 0 0 10px 20px;
-  padding-bottom: 10px;
+  padding: 0px 0px 10px 20px;
   margin: 0;
   color: var(--text-color);
   position: relative;
+}
+
+main ul ul {
+  margin-top: 6px;
+  margin-left: 20px;
+}
+
+main ul ul li {
+  padding: 0px 0px 6px 20px;
 }
 
 main ul li::before {
