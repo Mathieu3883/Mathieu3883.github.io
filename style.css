@@ -251,8 +251,12 @@ main ul li::before {
 }
 
 .legende {
-  font-size: 0.9em;
+  font-size: 0.85em;
   font-style: italic;
+}
+
+#projet5 .legende {
+  text-align: center;
 }
 
 .button {
@@ -301,6 +305,24 @@ main ul li::before {
 .voir-plus:hover {
   background-color: var(--orange);
   color: #fff;
+}
+
+#image-polytech-le-jeu {
+  width: 70%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+#projet5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#projet5 p {
+  margin-top: 0;
+  margin-bottom: 16px;
 }
 
 @media (max-width: 860px) {
