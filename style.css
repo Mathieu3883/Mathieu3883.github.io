@@ -250,6 +250,11 @@ main ul li::before {
   top: -0.35em;
 }
 
+.legende {
+  font-size: 0.9em;
+  font-style: italic;
+}
+
 .button {
   background-color: var(--orange);
   color: #fff;
