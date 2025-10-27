@@ -270,7 +270,7 @@ main ul li::before {
   text-decoration: none;
   font-weight: 600;
   display: inline-block;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .button:hover {
@@ -281,11 +281,7 @@ main ul li::before {
 .more-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease;
-}
-
-.more-content.open {
-  transition: max-height 0.5s ease;
+  transition: max-height 0.5s ease-in-out;
 }
 
 .voir-plus {
@@ -299,7 +295,7 @@ main ul li::before {
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .voir-plus:hover {
