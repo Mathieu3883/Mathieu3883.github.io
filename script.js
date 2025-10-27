@@ -50,6 +50,14 @@ window.addEventListener("scroll", () => {
   });
 });
 
+function debounce(func, wait = 150) {
+  let timeout;
+  return function(...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), wait);
+  };
+}
+
 function navHeight() {
   if (hamburger.offsetParent !== null) {
     nav.classList.remove("open");
@@ -67,6 +75,9 @@ function headerHeight() {
   );
 }
 
+const debouncedHeaderHeight = debounce(headerHeight, 100);
+const debouncedNavHeight = debounce(navHeight, 100);
+
 window.addEventListener("DOMContentLoaded", headerHeight);
-window.addEventListener("resize", headerHeight);
-window.addEventListener("resize", navHeight);
+window.addEventListener("resize", debouncedHeaderHeight);
+window.addEventListener("resize", debouncedNavHeight);
