@@ -75,9 +75,20 @@ function headerHeight() {
   );
 }
 
-const debouncedHeaderHeight = debounce(headerHeight, 100);
-const debouncedNavHeight = debounce(navHeight, 100);
+function updateOpenPanelsHeight() {
+  const openPanels = document.querySelectorAll(".more-content.open");
+  openPanels.forEach((panel) => {
+    panel.style.maxHeight = panel.scrollHeight + "px";
+  });
+}
+
+function handleResize() {
+  headerHeight();
+  navHeight();
+  updateOpenPanelsHeight();
+}
+
+const debouncedResizeHandler = debounce(handleResize, 100);
 
 window.addEventListener("DOMContentLoaded", headerHeight);
-window.addEventListener("resize", debouncedHeaderHeight);
-window.addEventListener("resize", debouncedNavHeight);
+window.addEventListener("resize", debouncedResizeHandler);
