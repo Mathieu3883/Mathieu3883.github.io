@@ -44,7 +44,7 @@ header button#hamburger {
   background: none;
   border: none;
   color: var(--text-color);
-  font-size: 24px;
+  font-size: 1.5rem;
   cursor: pointer;
   padding: 10px;
 }
