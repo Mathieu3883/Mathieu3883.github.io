@@ -23,9 +23,10 @@ voirPlusButtons.forEach((button) => {
 
 hamburger.addEventListener("click", () => {
   nav.classList.toggle("open");
-  nav.style.maxHeight = nav.classList.contains("open")
-    ? navUl.scrollHeight + "px"
-    : "0";
+  const isNavOpen = nav.classList.contains("open");
+  nav.style.maxHeight = isNavOpen ? navUl.scrollHeight + "px" : "0";
+  hamburger.setAttribute("aria-expanded", isNavOpen);
+  hamburger.setAttribute("aria-label", isNavOpen ? "Fermer le menu" : "Ouvrir le menu");
 });
 
 window.addEventListener("scroll", () => {
