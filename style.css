@@ -44,7 +44,7 @@ header button#hamburger {
   background: none;
   border: none;
   color: var(--text-color);
-  font-size: 24px;
+  font-size: 1.5rem;
   cursor: pointer;
   padding: 10px;
 }
@@ -182,7 +182,7 @@ section {
 
 #competences-box {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 2fr 3fr;
   gap: 30px;
   width: 100%;
 }
@@ -225,11 +225,19 @@ main ul {
 }
 
 main ul li {
-  padding: 0 0 10px 20px;
-  padding-bottom: 10px;
+  padding: 0px 0px 10px 20px;
   margin: 0;
   color: var(--text-color);
   position: relative;
+}
+
+main ul ul {
+  margin-top: 6px;
+  margin-left: 20px;
+}
+
+main ul ul li {
+  padding: 0px 0px 6px 20px;
 }
 
 main ul li::before {
@@ -240,6 +248,19 @@ main ul li::before {
   position: absolute;
   left: 0;
   top: -0.35em;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 0.85em;
+  text-align: center;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
 }
 
 .button {
@@ -253,7 +274,7 @@ main ul li::before {
   text-decoration: none;
   font-weight: 600;
   display: inline-block;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .button:hover {
@@ -264,11 +285,7 @@ main ul li::before {
 .more-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease;
-}
-
-.more-content.open {
-  transition: max-height 0.5s ease;
+  transition: max-height 0.5s ease-in-out;
 }
 
 .voir-plus {
@@ -282,7 +299,7 @@ main ul li::before {
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .voir-plus:hover {
@@ -290,13 +307,18 @@ main ul li::before {
   color: #fff;
 }
 
+#image-polytech-le-jeu {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
 @media (max-width: 860px) {
   header {
     flex-direction: column;
     align-items: center;
-  }
-  :root {
-    --header-height: 126px;
   }
   #accueil {
     flex-direction: column;
@@ -309,20 +331,11 @@ main ul li::before {
   main {
     padding: 0;
   }
-}
-
-@media (max-width: 600px) {
-  header {
-    flex-direction: column;
-  }
   #title {
     display: flex;
     justify-content: space-between;
     width: 100%;
     flex-direction: row;
-  }
-  header ul {
-    align-items: center;
   }
   header button#hamburger {
     display: block;
@@ -335,12 +348,6 @@ main ul li::before {
   :root {
     --header-height: 64px;
   }
-  section h2 {
-    font-size: 1.6rem;
-  }
-  h3 {
-    font-size: 1.4rem;
-  }
   header h1 a {
     padding: 0 10px;
   }
@@ -351,5 +358,17 @@ main ul li::before {
   }
   #nav.open {
     transition: max-height 0.3s ease;
+  }
+  #competences-box {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  section h2 {
+    font-size: 1.6rem;
+  }
+  h3 {
+    font-size: 1.4rem;
   }
 }

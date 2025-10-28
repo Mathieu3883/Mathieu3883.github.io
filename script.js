@@ -3,7 +3,7 @@ const navLinks = document.querySelectorAll("header nav a");
 const h1 = document.querySelector("h1");
 const sections = document.querySelectorAll("main section");
 const hamburger = document.getElementById("hamburger");
-const navUl = document.querySelector("ul");
+const navUl = document.querySelector("#nav ul");
 const nav = document.getElementById("nav");
 const header = document.querySelector("header");
 
@@ -23,9 +23,10 @@ voirPlusButtons.forEach((button) => {
 
 hamburger.addEventListener("click", () => {
   nav.classList.toggle("open");
-  nav.style.maxHeight = nav.classList.contains("open")
-    ? navUl.scrollHeight + "px"
-    : "0";
+  const isNavOpen = nav.classList.contains("open");
+  nav.style.maxHeight = isNavOpen ? navUl.scrollHeight + "px" : "0";
+  hamburger.setAttribute("aria-expanded", isNavOpen);
+  hamburger.setAttribute("aria-label", isNavOpen ? "Fermer le menu" : "Ouvrir le menu");
 });
 
 window.addEventListener("scroll", () => {
@@ -49,6 +50,14 @@ window.addEventListener("scroll", () => {
   });
 });
 
+function debounce(func, wait = 150) {
+  let timeout;
+  return function(...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), wait);
+  };
+}
+
 function navHeight() {
   if (hamburger.offsetParent !== null) {
     nav.classList.remove("open");
@@ -66,6 +75,20 @@ function headerHeight() {
   );
 }
 
+function updateOpenPanelsHeight() {
+  const openPanels = document.querySelectorAll(".more-content.open");
+  openPanels.forEach((panel) => {
+    panel.style.maxHeight = panel.scrollHeight + "px";
+  });
+}
+
+function handleResize() {
+  headerHeight();
+  navHeight();
+  updateOpenPanelsHeight();
+}
+
+const debouncedResizeHandler = debounce(handleResize, 100);
+
 window.addEventListener("DOMContentLoaded", headerHeight);
-window.addEventListener("resize", headerHeight);
-window.addEventListener("resize", navHeight);
+window.addEventListener("resize", debouncedResizeHandler);
