@@ -58,14 +58,14 @@
             <li><strong>Réseaux :</strong> Support et codage physique de l'information, mise en paquets, protocole Ethernet, détection et correction d'erreurs, adressage et routage de l'information (protocole IP).</li>
             <li><strong>Génie Logiciel :</strong> Concepts et méthodologies du développement de logiciels, conception d'interface homme-machine, diagramme de classes et d'objets.</li>
             <li><strong>Bases de Données :</strong> Modèle relationnel de données, langage relationnel SQL, SGBD, conception et mise en œuvre d'une base de données.</li>
-            <li><strong>Technologies du WEB :</strong> HTML, CSS, JavaScript, programmation asynchrone, API Fetch, API REST, Framework Vue.js.</li>
+            <li><strong>Technologies du WEB :</strong> HTML, CSS, JavaScript, Node.js, programmation asynchrone, API Fetch, API REST, Framework Vue.js.</li>
             <li><strong>Programmation Orientée Objets :</strong> Concepts et pratiques de la programmation orientée objets (encapsulation, héritage, classes et méthodes abstraites, interfaces, généricité), utilisation de Java et SpringBoot.</li>
             <li><strong>Systèmes :</strong> Manipulation de fichiers, processus, concurrence et outils de synchronisation, containerisation (Docker).</li>
             <li><strong>Numérique Responsable :</strong> Sensibilisation aux impacts environnementaux et sociaux des services numériques.</li>
           </ul>
           <h4>Projets pratiques :</h4>
           <ul>
-            <li><strong>Projet C (1 semaine fin novembre 2025) :</strong> Mise en pratique de l'algorithmique et de la programmation C.</li>
+            <li><strong>Projet C (1 semaine fin novembre 2025) :</strong> Développement d'un moteur de jeu de cartes et simulation statistique. Voir les détails dans la <a href="#projetC">section "Projets"</a>.</li>
             <li><strong>Projet d'intégration (4 semaines en mars 2026) :</strong> Conception et développement d'une application full-stack en équipe selon une approche agile. Voir les détails dans la <a href="#projet-integration-cci">section "Projets"</a>.</li>
           </ul>
         </div>
@@ -219,6 +219,22 @@
           </ul>
         </div>
         <button class="voir-plus" data-target="projet-integration">Voir plus</button>
+      </div>
+      <div class="part" id="projetC">
+        <h3>Projet C : Simulation de Jeux de Cartes (1 semaine - Novembre 2025)</h3>
+        <p>Projet intensif d'une semaine en équipe (dans le cadre du M2 CCI) pour développer en langage C un moteur de simulation de jeux de cartes en solitaire (Réussites). Partant d'une base de code existante, l'objectif était d'analyser le logiciel pour ensuite implémenter de nouvelles règles de jeu (Relais des 7, A la queue leu leu, Les quatre couleurs, Montée-Descente) et réaliser des simulations statistiques de gains.</p>
+        <p><strong>Technologies utilisées :</strong> C, Algorithmique, Git, GitHub, VS Code, Makefile</p>
+        <div id="projet-c-details" class="more-content">
+          <h4>Réalisations techniques :</h4>
+          <ul>
+            <li><strong>Analyse de code existant :</strong> Appropriation du code source fourni et du cahier des charges.</li>
+            <li><strong>Algorithmique :</strong> Conception et implémentation de trois nouveaux jeux de Réussites (A la queue leu leu, Les quatre couleurs, Montée-Descente) en respectant les spécifications fonctionnelles et en s'inspirant du jeu "Relais des 7" déjà existant.</li>
+            <li><strong>Simulation :</strong> Implémentation d'une fonctionnalité d'analyse statistique permettant de simuler un grand nombre de parties sans interface graphique pour calculer les probabilités de gain.</li>
+            <li><strong>Refactoring & Structures de Données :</strong> Remplacement complet de l'implémentation du type "Tas", initialement basée sur des listes doublement chaînées, par une structure de type tableaux. Réécriture des primitives de manipulation des Tas en garantissant l'intégrité des interfaces pour ne pas impacter le reste du code.</li>
+            <li><strong>Démonstrations :</strong> Démos commentées pour présenter notre travail aux professeurs à la fin du projet.</li>
+          </ul>
+        </div>
+        <button class="voir-plus" data-target="projet-c-details">Voir plus</button>
       </div>
       <div class="part" id="autoformation">
         <h3>Autoformation en informatique (2024 - 2025)</h3>
