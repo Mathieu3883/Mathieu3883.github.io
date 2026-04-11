@@ -250,6 +250,13 @@ main ul li::before {
   top: -0.35em;
 }
 
+#projet-integration img {
+  width: 100%;
+  max-width: 900px;
+  display: block;
+  margin:5px;
+}
+
 figcaption {
   font-style: italic;
   font-size: 0.85em;
@@ -313,6 +320,16 @@ figure {
   height: auto;
   border-radius: 5px;
   margin-bottom: 5px;
+}
+
+.legende {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.contrib-forte {
+  color: #2980b9; font-weight: 600;
 }
 
 @media (max-width: 1092px) {
